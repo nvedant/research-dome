@@ -87,7 +87,7 @@ The app is not code-signed yet, so your system may show a one-time warning:
 - **Linux** — none for `.deb`/`.rpm`; make the AppImage executable as shown above.
 
 **LaTeX** is optional. Building a PDF in LaTeX Studio needs a TeX distribution installed:
-[MiKTeX](https://miktex.org) (Windows), [MacTeX](https://tug.org/mactex/) (macOS) or TeX Live (`sudo apt install texlive-full`). Everything else works without it.
+[MiKTeX](https://miktex.org) (Windows), [MacTeX](https://tug.org/mactex/) (macOS) or TeX Live in Linux (`sudo apt install texlive-full`) in Debian/Ubuntu Based System and (`sudo pacman -S texlive-basic texlive-bin texlive-latex texlive-latexrecommended texlive-latexextra biber`) for Arch based System . Everything else works without it.
 
 ### Where your data lives
 
