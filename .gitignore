@@ -3,3 +3,40 @@ dist/
 target/
 *.log
 .DS_Store
+
+# Secrets and local settings
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.pfx
+*.p12
+*.cer
+
+# Your app data (database, papers, logs) - never upload
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+*.db
+storage/
+logs/
+*.log
+
+# Installers (publish these in GitHub Releases, not in the code)
+*.exe
+*.msi
+*.dmg
+*.AppImage
+*.deb
+*.rpm
+
+# Tauri generated files
+src-tauri/gen/
+
+# Editor and system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+desktop.ini
