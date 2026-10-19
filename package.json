@@ -1,0 +1,36 @@
+{
+  "name": "research-dome",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Research Dome — a local-first research paper workspace (desktop edition)",
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
+    "icon": "tauri icon app-icon.png",
+    "tauri": "tauri",
+    "app:dev": "tauri dev",
+    "app:build": "tauri build",
+    "server": "cargo run -p research-dome-core --bin dome-server",
+    "test:core": "cargo test -p research-dome-core"
+  },
+  "dependencies": {
+    "@fontsource/im-fell-english": "^5.3.0",
+    "@fontsource/inter": "^5.3.0",
+    "@fontsource/jetbrains-mono": "^5.3.0",
+    "@fontsource/newsreader": "^5.3.0",
+    "@monaco-editor/react": "^4.7.0",
+    "@tauri-apps/api": "^2.12.4",
+    "lucide-react": "^1.59.0",
+    "monaco-editor": "^0.57.0",
+    "react": "^19.3.1",
+    "react-dom": "^19.3.1",
+    "react-pdf": "^10.5.0"
+  },
+  "devDependencies": {
+    "@tauri-apps/cli": "^2.12.3",
+    "@vitejs/plugin-react": "^6.1.2",
+    "vite": "^8.3.4"
+  }
+}
