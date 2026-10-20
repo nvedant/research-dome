@@ -128,10 +128,6 @@ Installers are written to `target/release/bundle/`:
 
 An installer can only be built **on its own operating system**. To build all three at once, use the included GitHub Actions workflow — see **[docs/RELEASING.md](docs/RELEASING.md)**.
 
-### Changing the app icon
-
-Replace `app-icon.png` (square PNG, 1024×1024 recommended) and run `npm run icon`. This regenerates every size in `src-tauri/icons/`. For the logo shown inside the app also replace `src/assets/icon-512.png`, `src/assets/icon-160.png` and `public/favicon.png`.
-
 ## 🏗 Architecture
 
 ```
