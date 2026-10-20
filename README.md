@@ -86,8 +86,42 @@ The app is not code-signed yet, so your system may show a one-time warning:
   `xattr -cr "/Applications/Research Dome.app"` once.
 - **Linux** — none for `.deb`/`.rpm`; make the AppImage executable as shown above.
 
-**LaTeX** is optional. Building a PDF in LaTeX Studio needs a TeX distribution installed:
-[MiKTeX](https://miktex.org) (Windows), [MacTeX](https://tug.org/mactex/) (macOS) or TeX Live in Linux (`sudo apt install texlive-full`) in Debian/Ubuntu Based System and (`sudo pacman -S texlive-basic texlive-bin texlive-latex texlive-latexrecommended texlive-latexextra biber`) for Arch based System . Everything else works without it.
+### LaTeX (optional)
+ 
+Building a PDF in LaTeX Studio needs a TeX distribution installed on your system. Everything else in the app works without it.
+ 
+| System | Install |
+|---|---|
+| **Windows** | [MiKTeX](https://miktex.org) |
+| **macOS** | [MacTeX](https://tug.org/mactex/) |
+| **Linux** (Debian/Ubuntu) | `sudo apt install texlive-full` |
+| **Linux** (Arch) | Choose one of the two options below |
+ 
+#### Arch Linux
+ 
+>  Either option is a large download (up to about **2.5 GB**).
+ 
+**Option 1 — Academic bundle** *(recommended for IEEE, ACM, Springer LNCS and Elsevier formats)*
+ 
+```bash
+sudo pacman -S texlive-basic texlive-bin texlive-latex texlive-latexrecommended \
+  texlive-latexextra texlive-publishers texlive-mathscience texlive-fontsrecommended \
+  texlive-fontsextra texlive-bibtexextra texlive-binextra biber
+```
+ 
+Includes:
+ 
+- **Publisher classes:** `IEEEtran.cls`, `acmart.cls`, `llncs.cls`
+- **CS & math packages:** `algpseudocode`, `algorithm2e`, `siunitx`
+- **Publisher fonts:** `newtx`, `libertine`
+- **Bibliography styles:** BibTeX/Biber styles such as `biblatex-ieee`
+- **Build tool:** `latexmk`
+
+**Option 2 — Full TeX Live** *(all-in-one, so you never hit a missing-package error)*
+ 
+```bash
+sudo pacman -S texlive-meta biber
+```
 
 ### Where your data lives
 
