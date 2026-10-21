@@ -7,8 +7,6 @@
 **A private, offline research library for your desktop.**
 Organise papers, read and annotate PDFs in tabs, collect evidence and figures, and write your paper in LaTeX — all on your own computer.
 
-[![Release](https://img.shields.io/github/v/release/YOUR-USERNAME/research-dome?style=flat-square&color=f0d28f&labelColor=081523)](https://github.com/YOUR-USERNAME/research-dome/releases/latest)
-[![Downloads](https://img.shields.io/github/downloads/YOUR-USERNAME/research-dome/total?style=flat-square&color=f0d28f&labelColor=081523)](https://github.com/YOUR-USERNAME/research-dome/releases)
 [![License: MIT](https://img.shields.io/badge/license-MIT-f0d28f?style=flat-square&labelColor=081523)](https://opensource.org/license/mit)
 ![Platforms](https://img.shields.io/badge/platforms-Windows%20%7C%20macOS%20%7C%20Linux-f0d28f?style=flat-square&labelColor=081523)
 ![Built with Rust](https://img.shields.io/badge/built%20with-Rust%20%2B%20Tauri-f0d28f?style=flat-square&labelColor=081523)
@@ -21,21 +19,13 @@ Organise papers, read and annotate PDFs in tabs, collect evidence and figures, a
 
 ## 🎬 Demo
 
-<!--
-  HOW TO ADD YOUR VIDEO (takes 1 minute):
-  1. Open this README on github.com and click the pencil icon (Edit).
-  2. Drag your demo .mp4 into the editor at this spot (max 10 MB on free accounts; 100 MB on paid).
-  3. GitHub uploads it and pastes a link like  https://github.com/user-attachments/assets/xxxxxxxx
-  4. Delete this comment block and commit. The video now plays right inside the README.
--->
+<div align="center">
 
-> 📹 **Demo video goes here** — see the comment in this file for the 1-minute upload steps.
+[![Watch the Research Dome demo on YouTube](docs/screenshots/home.png)](https://youtu.be/wbeEpigsqVM)
 
-If you prefer YouTube, use a clickable thumbnail instead:
+**▶ [Watch the demo on YouTube](https://youtu.be/wbeEpigsqVM)**
 
-```markdown
-[![Watch the demo](docs/screenshots/home.png)](https://www.youtube.com/watch?v=YOUR_VIDEO_ID)
-```
+</div>
 
 <div align="center">
   <img src="docs/screenshots/reader-tabs.png" alt="Reading several PDFs in tabs" width="860" />
@@ -65,7 +55,13 @@ If you prefer YouTube, use a clickable thumbnail instead:
 
 ## 📥 Download
 
-Get the latest installer for your system from the **[Releases page](https://github.com/YOUR-USERNAME/research-dome/releases/latest)**.
+> [!IMPORTANT]
+> **Read this before you build a PDF: a LaTeX installation is required.**
+> Research Dome does not ship with LaTeX, so **Build PDF** in LaTeX Studio only works after you install one. It is a different tool on each system: **MiKTeX** on Windows, **MacTeX** on macOS, and **TeX Live** on Linux. See [LaTeX setup](#latex-setup-required-for-build-pdf) below for the exact steps for your system. Everything else in the app works without it.
+>
+> ⏱ **The first PDF build takes longer** (it can take a few minutes). LaTeX sets up its fonts and may download the packages your document needs, so the first build can also need an internet connection. Later builds are much faster.
+
+Get the latest installer for your system from the **[Releases page](https://github.com/nvedant/research-dome/releases/latest)**.
 
 | System | File to download | Notes |
 |---|---|---|
@@ -86,9 +82,11 @@ The app is not code-signed yet, so your system may show a one-time warning:
   `xattr -cr "/Applications/Research Dome.app"` once.
 - **Linux** — none for `.deb`/`.rpm`; make the AppImage executable as shown above.
 
-### LaTeX (optional)
+### LaTeX setup (required for Build PDF)
  
 Building a PDF in LaTeX Studio needs a TeX distribution installed on your system. Everything else in the app works without it.
+
+> **Note:** the first PDF build is slow (a few minutes) while LaTeX prepares fonts and fetches missing packages; after that, builds take seconds.
  
 | System | Install |
 |---|---|
